@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<link rel="stylesheet" href="style.css">
+	<title></title>
+	<script type="text/javascript">
+		$(document).ready(function() {
+ 			$('img').click(function() {
+ 				$(this).hide();
+ 			})
+
+ 			$('#restore').click(function(){
+ 				$('img').show();
+ 			})
+		})
+	</script>
+</head>
+<body>
+	<h1> Disappearing Ninjas </h1>
+	<div>
+		<img src="hat.jpg" width="250">
+		<img src="hat.jpg" width="250">
+		<img src="hat.jpg" width="250">
+		<img src="hat.jpg" width="250">
+	</div>
+	<div>
+		<img src="hat.jpg" width="250">
+		<img src="hat.jpg" width="250">
+		<img src="hat.jpg" width="250">
+		<img src="hat.jpg" width="250">
+	</div>
+	<button id="restore">Restore</button>
+	
+	</div>
+</body>
+</html>

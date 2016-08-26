@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			var dojo = ['dojo', 'thing', 'other thing']
+
+
+			$('a').click(function(){
+				console.log(dojo);
+			})
+
+
+			//effects methods
+			$('#hide').click(function(){
+				$('p').hide();
+			})
+			$('#show').click(function(){
+				$('p').show();
+			})
+
+			//manipulation methods **** .hover CAN TAKE TWO INPUT FUNCTIONS *******
+			$('h3').hover(function() {
+				$('h2').text('go see the Space Needle!');
+			}, function() {
+				$('h2').text('This is the h2');
+			});
+
+			$('.append').click(function(){
+				$('.result').append('<h4>.append adds HTML! </h4>');
+			})
+
+	
+			// css method
+			$('button').click(function(){
+				$('h4').css('background-color', 'yellow');
+			});
+
+			//getter function
+			var myText = $('p').text();
+			console.log(myText);
+
+			//setter function 
+			$('button').click(function() {
+				$('#myParagraph').text('see how I .text() works as a setter!');
+			})
+
+		});
+	</script>
+
+	<title></title>
+	 
+ 	
+</head>
+<body>
+	<div class="result"></div>
+	<a href="#">Let's see if this works</a>
+	<h4>Click me!</h4>
+	<h4>Click me too!</h4>
+	<p id="myParagraph">what is in here</p>
+	<button id="hide">hide</button>
+	<button id="show">show</button>
+	<p>Some paragraphs</p>
+	<p>Some paragraphs</p>
+	<p>Some paragraphs</p>
+
+
+	<h3> What is this? an h3 </h3>
+	<h2> THis is the h2 </h2>
+
+	<button class="append">What is this going to do?</button>
+	<div class="result"></div>
+</body>
+</html>

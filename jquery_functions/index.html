@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		
+		//hideshow
+		$('#show-click').click(function(){
+			$('.ghost').show();
+		})
+
+		$('#hide-click').click(function(){
+			$('.ghost').hide();
+		})
+
+		//focusing
+		$('#focusing input[type=text]').focus(function() {
+			$(this).addClass('spooky');
+		})
+
+		//val
+		$('select').change(function() {
+			$('#selectors').html($(this).val());
+		})
+
+		$('input').click(function() {
+			$('focusing').append($(this).val());
+		})
+
+		//after, append, reset
+		$('#go-after input[type=text]').focus(function(){
+			$('#after').after('<h2 class="fuzz"> What? </h2>')
+		})
+		$('#go-after input[type=radio]').focus(function(){
+			$('#after').append('<h3 class="fuzz"> Hello </h3>')
+		})
+		$('#go-before input[type=text]').focus(function(){
+			$('#after').before('<h3 class="fuzz"> Darb </h3>')
+		})
+		$('#reset').click(function(){
+			$('.fuzz').hide();
+
+		})
+
+		//slides, fades,
+		
+		$('#slide input[type=text]').hover(
+			function(){
+				$('#blackness').slideDown(1000);
+			}, function(){
+				$('#blackness').slideUp();
+
+		})
+
+		$('#slide input[type=checkbox]').hover(
+			function() {
+				$('#blueness').fadeOut();
+			}, function(){
+				$('#blueness').fadeIn();
+			}
+		)
+		$('#slide input[type=radio]').click(function(){
+			$('#purpleness').slideToggle(200);
+		})
+
+		//Adding CSS classes;
+		$('#add input[type=text]').click(function(){
+			$('#change-me').addClass('gradientyo')
+		})
+
+		$('#add textarea').click(function(){
+			$('#change-me').addClass('borderific')
+		})
+		$('#remove input[type=checkbox]').click(function(){
+			$('#change-me').removeClass('gradientyo')
+		})
+		$('#remove input[type=radio]').click(function(){
+			$('#change-me').removeClass('borderific')
+		})
+		$('#grow').click(function(){
+			$('#change-me').css('width', '500px')
+		})
+		$('#shrink').click(function(){
+			$('#change-me').css('width', '100px')
+		})
+		
+		$('div').click(function(){
+			var width = $(this).css( "width" );
+			$('#result').html("The width of that div is:" + width);
+
+		})
+
+		//data
+		$('#data').data("foo", 52);
+		$('#data').click(function(){
+			$('#data-mine').text('This div has stored: ' + $('#data').data("foo"))
+		})
+
+		//attr
+
+		$('#show-hat').click(function(){
+			$('img').attr({
+				src: "hat.jpg"
+			})
+		})
+		$('#show-cat').click(function(){
+			$('img').attr({
+				src: "download.jpeg"
+			})
+		})
+
+	})
+
+	</script>
+	<title></title>
+</head>
+<body>
+	<div class="showoff" id="hideshow">
+		<h1> Show and Hide </h1>
+		<ul>
+			<li>.click()</li>
+			<li>.show()</li>
+			<li>.hide()</li>
+		</ul>
+		<button id="show-click"> When I'm Clicked, the paragraphs below me will show </button>
+		<p class="ghost">Spooky</p>
+		<p class="ghost">Spookier</p>
+		<button id="hide-click"> Now away with the ghosts! </h2>
+	</div>
+	<div class="showoff" id="focusing">
+		<h1> .focus, .addClass </h1>
+		<form> 
+			<label>
+				<input type="text">
+			</label>		
+			<label>
+				<input type="text">
+			</label>		
+			<label>
+				<input type="text">
+			</label>		
+			<label>
+				<input type="checkbox" value="KCRW"> KCRW
+			</label>
+		</form>
+	</div>
+	<div class="showoff" id="val">
+		<h1> .val(), .html(), .change() </h1>
+		<p id="selectors"></p>
+		<select id="people">
+			<option value="blahblahblah"> Anna </option>
+			<option value="Joanne"> Joanne </option>
+			<option value="Beatrice"> Beatrice </option>
+		</select>
+		<select>
+			<option value="Sam"> Sam </option>
+			<option value="Austin"> Austin </option>
+			<option value="Mike"> Mike </option>
+		</select>
+	</div>
+	<div class="showoff" id="after">
+		<h1>.after() vs. .append(), .before() vs. prepend();</h1>
+		<form id="go-after">
+			<label>
+				These go after this div<input type="text">
+			</label>
+			<label>
+				These go<input type="radio">
+			</label>
+		</form>
+		<form id="go-before">
+			<label>
+				These go before this div <input type="text">
+			</label>
+		 
+		</form>
+		 
+		<button id="reset">Let's remove all this fuzz</button>
+	</div>
+	<div class="showoff" id="slide">
+		<h1> Slides and Fades </h1>
+		<div>
+		<label>
+			Hover over this for fun<input type="text">
+		</label>
+		<label>
+			Now try to hover over THIS!!!<input type="checkbox">
+		</label>
+		<label>
+			Now this one... oh boy<input type="radio">
+		</label>
+		</div>
+		<div id="blackness">
+		</div>
+		<div id="blueness">
+		</div>
+		<div id="purpleness">
+		</div>
+	</div>
+	<div class="showoff" id="css">
+		<h1> CSS Torture of Box </h1>
+		<form id="add">
+			<label>
+				For the Green Please <input type="text">
+			</label>
+			<label>
+				If you're violet and you know it <textarea rows="4" cols="20"></textarea>
+			</label>
+		</form>
+		<form id="remove">
+			<label>
+				Make me clean <input type="checkbox">
+			</label>
+			<label>
+				Set me free <input type="radio"> 
+			</label>
+		</form>
+
+			<button id="shrink">shrink me</button>
+			<button id="grow">grow me </button>
+		
+		<p id="result"></p>
+		<div id="change-me">
+			Watch Me Change AHAAAHA
+		</div>
+	</div>
+	<div class="showoff" id="data">
+	<h1> Let's check this data out </h1>
+		<p id="data-mine"></p>
+	</div>
+	<div class='showoff' id="attr">
+		<h1> .attr </h1>
+		<img>
+		<button id="show-hat"> Make a hat appear </button>
+		<button id="show-cat"> Make a cat appear </button>
+	</div>
+	</div>
+
+</body>
+</html>

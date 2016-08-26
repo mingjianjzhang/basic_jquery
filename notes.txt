@@ -1,0 +1,5 @@
+The parentheses after a function invoke it... you can pass a function as a value without them.
+
+You can inspect for event listeners in browsers. 
+
+

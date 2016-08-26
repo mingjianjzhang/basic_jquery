@@ -1,0 +1,37 @@
+body {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+body > h2 {
+	text-align: center;
+}
+
+.addedClass {
+	color: red;
+	background-color: blue;
+}
+
+#dialog {
+	display: none;							
+}
+
+#attr img, #attr form {
+	display: inline-block;
+}
+
+#beforeAfter > form > label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.ghost {
+	display: none;
+}
+
+#fade, #slide{
+	height: 300px;
+}
+#fade img, #slide img{
+	display: none;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+	<script>
+	function changeUp(str) {
+			var source = $(str).attr('src');
+			$(str).attr('src', $(str).attr('alt-src'));
+			$(str).attr('alt-src', source);
+	}
+
+
+	$(document).ready(function() {
+		
+		$('#tester').click(function() {
+			changeUp('#test');
+		})
+
+		$('img').hover(function() {
+			changeUp(this);
+		}, function() {
+			changeUp(this);
+		})
+
+
+
+	})
+	</script>
+</head>
+<body>
+	<h1> Hover In/Out</h1>
+	<img id="test" src="kida.jpeg" alt-src="amnesiac.jpeg">
+	<img src="kida.jpeg" alt-src="amnesiac.jpeg">
+	<img src="kida.jpeg" alt-src="amnesiac.jpeg">
+	<img src="kida.jpeg" alt-src="amnesiac.jpeg">
+	<button id="tester"> Test </button>
+	
+</body>
+</html>

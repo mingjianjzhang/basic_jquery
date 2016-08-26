@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Jquery Functions</title>
+	<script type="text/javascript" src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/hot-sneaks/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<script src="functions.js"></script>
+	
+</head>
+<body>
+	<h2> JQuery Functions </h2>
+<div id="accordion">
+  	<h3>.addClass</h3>
+  	<div id="addClass">
+  		<button>Add Class</button>  
+  		<p> Click the button to change the background and text color of this paragraph </p>
+  	</div>
+  	<h3>.focus</h3>
+  	<div id="focus">
+  	 	<form>
+  	 		<label><input type="text" placeholder="Focus on this"></label>
+  	 		<div id="dialog" title="Now you see...">
+  	 			<p> ... why I had you focus on this </p>
+  	 		</div>
+  	 	</form>
+  	</div>
+  	<h3>.val, .text</h3>
+  	<div id="val">
+  		<form>
+  			<input type="text" placeholder="Type something here">
+  			<input type="submit" value="Click to change text below to what you typed">
+  		</form>
+		<p> Let's see what you typed </p>
+  	</div>
+  	<h3>.attr</h3>
+  	<div id="attr">
+  		<img src="whoops.jpg">
+  		
+  	   	<form>
+  	   		<p> Fix this image... what do you want to see? Cat.jpeg, or hat.jpg? </p>
+			<input type="text" placeholder="Type the image file you want to see">
+			<input type="submit" value="Fix the broken image">
+  	   	</form>
+  	</div>
+  	<h3>.html</h3>
+  	<div id="html">
+  	   	<form>
+  			<input id="background" type="text" placeholder="Background color">
+  			<input id="fontColor" type="text" placeholder="Text color">
+  			<input id="text" type="text" placeholder="Text">
+  			<input type="submit" value="Make customizied text appear below">
+  		</form>
+  		<div id="textBox">
+  		</div>
+  	</div>
+  		
+
+  	<h3>.data, .append</h3>
+  	<div id="data">
+  	   <button id="clickCounter">Click this button a bunch of times </button>
+	   <p> Wouldn't you like to know how many times you clicked it? Good thing I stored it in the div </p>
+	   <button id="clickDisplayer">Access click data (scroll down to see)</button>
+  	</div>
+  	<h3 id="beforeHeader">.before, .after</h3>
+  	<div id="beforeAfter">
+  		<h2> Make new accordion tabs! </h2>
+  		<form>
+  			<label><input id="headerText" type="text" placeholder="Header"></label>
+  			<label><textarea id="content" placeholder="Content"></textarea></label>
+  			<label>
+  				<p>Where would you like to add the tab? </p>
+  				Before<input id="before" name="position" type="radio">
+  				After<input id="after" name="position" type="radio">
+  			</label>
+  			<input type="submit" value="Create Tab">
+  		</form>
+  	</div>
+ 
+  	<h3>.show, .hide, .toggle</h3>
+  	<div>
+  	   	<button id="show-click"> When I'm Clicked, the paragraphs below me will show </button>
+  	   	<button id="hide-click"> Now away with the ghosts! </h2>
+		<button id="toggle-click"> This button does twice the work! </button>
+		<p class="ghost">Spooky</p>
+		<p class="ghost">Spookier</p>
+		
+  	</div>
+  	
+  	<h3>.fadeIn, .fadeOut</h3>
+  	<div id="fade">
+  		<h3> Hover over this to see something spooky... </h3>
+  		<img src="spooky.png">
+  	   
+  	</div>
+
+  	<h3>.slideDown, .slideUp, .slideToggle</h3>
+  	<div id="slide">
+  		<div>
+  			<button id="up">Slide it Down</button>
+  			<button id="down">Slide it Up</button>
+  			<button id="updown">Two in One </button>
+  		</div>
+  		<img src="ladder.jpg">
+  	</div>
+ 
+</body>
+</html>
